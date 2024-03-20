@@ -1,0 +1,13 @@
+---
+- name: Execute a command on ping host
+  hosts: ping
+  become: yes
+
+  tasks:
+    - name: Run uname -a
+      command: uname -a
+      register: uname_output
+
+    - name: Show output
+      debug:
+        msg: "{{ uname_output.stdout }}"
