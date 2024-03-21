@@ -2,7 +2,7 @@
 
 - ansible.cfg is ansible's configuration file, which is INI file.
 - inventory.yml is target machine settings.
-- playbook.yml is recipe for target.
+- main.yml is recipes for target.
 
 ### install ansible
 
@@ -13,5 +13,5 @@ apt install ansible sshpass
 ### run ansible
 
 ```sh
-ansible-playbook -i inventory.yml playbook.yaml
+ansible-playbook -i inventory.yml main.yml
 ```
