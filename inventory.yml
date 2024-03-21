@@ -4,9 +4,10 @@ all:
     ping:
       ansible_host: 192.168.0.101
       ansible_user: ping
-      ansible_password: pong
-      ansible_sudo_pass: pong
+      ansible_password: ubuntu
+      ansible_sudo_pass: ubuntu
     pong:
       ansible_host: 192.168.0.102
       ansible_user: pong
       ansible_password: ubuntu
+      ansible_sudo_pass: ubuntu

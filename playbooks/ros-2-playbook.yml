@@ -1,6 +1,6 @@
 ---
 - name: Install ROS 2 humble
-  hosts: ping
+  hosts: all
   become: true
 
   tasks:

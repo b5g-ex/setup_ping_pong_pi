@@ -1,6 +1,6 @@
 ---
 - name: Install Erlang/Elixir by asdf
-  hosts: ping
+  hosts: all
 
   tasks:
     - name: Install asdf prerequisites
