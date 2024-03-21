@@ -1,6 +1,7 @@
 ---
 - name: Install ROS 2 humble
   hosts: ping
+  become: true
 
   tasks:
     - name: Set locale
