@@ -1,0 +1,14 @@
+---
+- name: Install Measurers
+  hosts: all
+
+  tasks:
+    - name: Install ping_pong_measurer_rclex
+      shell: |
+        test -d ping_pong_measurer_rclex || git clone -b pojiro/replace-rclex-with-v0.10.x https://github.com/b5g-ex/ping_pong_measurer_rclex.git
+
+    - name: Install ping_pong_measurer_ros2
+      shell: |
+        test -d ros2_ws/src || mkdir -p ros2_ws/src
+        test -d ros2_ws/src/ping_pong_measurer || git clone -b pojiro/prepare-for-comparing-with-rclex-v0.10.x https://github.com/b5g-ex/ping_pong_measurer_ros2.git ros2_ws/src/ping_pong_measurer
+        ln -sf ros2_ws/src/ping_pong_measurer/Makefile ros2_ws/Makefile
