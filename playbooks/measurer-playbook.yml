@@ -11,4 +11,4 @@
       shell: |
         test -d ros2_ws/src || mkdir -p ros2_ws/src
         test -d ros2_ws/src/ping_pong_measurer || git clone -b pojiro/prepare-for-comparing-with-rclex-v0.10.x https://github.com/b5g-ex/ping_pong_measurer_ros2.git ros2_ws/src/ping_pong_measurer
-        ln -sf ros2_ws/src/ping_pong_measurer/Makefile ros2_ws/Makefile
+        cd ros2_ws && ln -sf src/ping_pong_measurer/Makefile Makefile
