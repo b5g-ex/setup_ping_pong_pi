@@ -32,3 +32,8 @@
     - name: Setup environment
       shell: |
         grep -qF 'source /opt/ros/humble/setup.bash' ~/.bashrc || echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
+
+    - name: Install Eclipse Cyclone DDS
+      become: true
+      shell: |
+        sudo apt install ros-humble-rmw-cyclonedds-cpp -y
