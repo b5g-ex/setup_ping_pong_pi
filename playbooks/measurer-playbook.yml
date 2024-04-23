@@ -14,3 +14,8 @@
         mkdir -p ros2_ws/src
         git clone -b pojiro/prepare-for-comparing-with-rclex-v0.10.x https://github.com/b5g-ex/ping_pong_measurer_ros2.git ros2_ws/src/ping_pong_measurer
         cd ros2_ws && ln -sf src/ping_pong_measurer/Makefile Makefile
+
+    - name: Install os_info_measurer
+      shell: |
+        rm -rf os_info_measurer
+        git clone https://github.com/b5g-ex/os_info_measurer.git
