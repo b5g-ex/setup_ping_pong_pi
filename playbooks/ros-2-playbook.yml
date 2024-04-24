@@ -29,7 +29,7 @@
         sudo apt install ros-humble-ros-base -y
         sudo apt install ros-dev-tools -y
 
-    - name: Setup environment
+    - name: Setup ROS 2 environment
       shell: |
         grep -qF 'source /opt/ros/humble/setup.bash' ~/.bashrc || echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
 
@@ -37,3 +37,7 @@
       become: true
       shell: |
         sudo apt install ros-humble-rmw-cyclonedds-cpp -y
+
+    - name: Setup Eclipse Cyclone DDS environment
+      shell: |
+        grep -qF 'export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp' ~/.bashrc || echo 'export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp' >> ~/.bashrc
