@@ -7,6 +7,8 @@
       shell: |
         rm -rf ping_pong_measurer_rclex
         git clone -b pojiro/replace-rclex-with-v0.10.x https://github.com/b5g-ex/ping_pong_measurer_rclex.git
+        cd ping_pong_measurer_rclex
+        bash -ic "mix do deps.get, rclex.gen.msgs, compile && exit"
 
     - name: Install ping_pong_measurer_ros2
       shell: |
@@ -19,3 +21,5 @@
       shell: |
         rm -rf os_info_measurer
         git clone https://github.com/b5g-ex/os_info_measurer.git
+        cd os_info_measurer
+        bash -ic "mix do deps.get, compile && exit"
