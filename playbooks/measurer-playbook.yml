@@ -12,7 +12,7 @@
 
     - name: Install ping_pong_measurer_ros2
       shell: |
-        rm -rf ros2_ws/src
+        rm -rf ros2_ws
         mkdir -p ros2_ws/src
         git clone -b pojiro/prepare-for-comparing-with-rclex-v0.10.x https://github.com/b5g-ex/ping_pong_measurer_ros2.git ros2_ws/src/ping_pong_measurer
         cd ros2_ws && ln -sf src/ping_pong_measurer/Makefile Makefile
