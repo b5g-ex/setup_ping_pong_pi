@@ -6,7 +6,7 @@
     - name: Install ping_pong_measurer_rclex
       shell: |
         rm -rf ping_pong_measurer_rclex
-        git clone -b pojiro/replace-rclex-with-v0.10.x https://github.com/b5g-ex/ping_pong_measurer_rclex.git
+        git clone -b v1.1.0 https://github.com/b5g-ex/ping_pong_measurer_rclex.git
         cd ping_pong_measurer_rclex
         bash -ic "mix do deps.get, rclex.gen.msgs, compile && exit"
 
@@ -14,12 +14,12 @@
       shell: |
         rm -rf ros2_ws
         mkdir -p ros2_ws/src
-        git clone -b pojiro/prepare-for-comparing-with-rclex-v0.10.x https://github.com/b5g-ex/ping_pong_measurer_ros2.git ros2_ws/src/ping_pong_measurer
+        git clone -b v1.1.0 https://github.com/b5g-ex/ping_pong_measurer_ros2.git ros2_ws/src/ping_pong_measurer
         cd ros2_ws && ln -sf src/ping_pong_measurer/Makefile Makefile
 
     - name: Install os_info_measurer
       shell: |
         rm -rf os_info_measurer
-        git clone https://github.com/b5g-ex/os_info_measurer.git
+        git clone -b v0.1.1 https://github.com/b5g-ex/os_info_measurer.git
         cd os_info_measurer
         bash -ic "mix do deps.get, compile && exit"
