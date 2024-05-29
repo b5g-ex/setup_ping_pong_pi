@@ -98,7 +98,7 @@ network:
       optional: true
 ```
 
-- Installs needs WAN access, so we need to give the WAN accesible static IP, router's and name server's IP.
+- Installs needs WAN access, so we need to give the WAN accessible static IP, router's and name server's IP.
 - ex. ping's IP is '192.168.0.101', pong's IP is '192.168.0.102'
 
 ### setup targets
@@ -127,6 +127,12 @@ You need to access ping/pong with SSH by hand first time to resolve fingerprints
 
 ```sh
 ansible-playbook -i inventory.yml main.yml
+```
+
+It's also possible to specify a playbook directly.
+
+```
+ansible-playbook -i inventory.yml playbooks/measurer-playbook.yml
 ```
 
 ## about ansible files
